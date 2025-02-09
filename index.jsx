@@ -1,13 +1,5 @@
-<html>
-  <body>
-    <div id="app"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/jsx">
-        const domNode = document.getElementById("app");
+import {useState} from 'react';
 
-        // Always capitalize the React Component
          function Header({title}){
            return <h1>{title ? title : 'Default title'}</h1>;
          }
@@ -15,7 +7,7 @@
          function Homepage(){
            const names = [ 'cedrick feze', 'kobe bryan', 'lewis hamilton'];
 
-           const [likes, setLikes] = React.useState(0);
+           const [likes, setLikes] = useState(0);
 
            function handleClick() {
              setLikes(likes + 1);
@@ -33,8 +25,5 @@
          );
        }
 
-          const root = ReactDOM.createRoot(domNode);
+
           root.render(<Homepage />);
-    </script>
-  </body>
-</html>
