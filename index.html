@@ -4,10 +4,24 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/jsx"></script>
+    <script type="text/jsx">
         const domNode = document.getElementById("app");
+
+        // Always capitalize the React Component
+         function Header(){
+            return (<h1>Develop. Preview. share.</h1>)
+         }
+
+         function Homepage(){
+          return (
+
+            /* Nesting the header Component*/
+            <Header />
+         );
+       }
+
           const root = ReactDOM.createRoot(domNode);
-          root.render(<h1>Develop. Preview. share.</h1>);
+          root.render(<Homepage />);
     </script>
   </body>
 </html>
